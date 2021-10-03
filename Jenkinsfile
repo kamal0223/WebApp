@@ -45,6 +45,7 @@ pipeline {
     stage('QA Certify') {
       steps {
         echo 'QA manual certification'
+        input 'can we proceed with the build?'
       }
     }
 
@@ -57,6 +58,7 @@ pipeline {
     stage('UAT Certification') {
       steps {
         echo 'Manually certify UAT'
+        input 'can we proceed with UAT certify?'
       }
     }
 
