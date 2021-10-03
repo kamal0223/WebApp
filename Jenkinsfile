@@ -43,6 +43,9 @@ pipeline {
     }
 
     stage('QA Certify') {
+      when {
+        branch 'master'
+      }
       steps {
         echo 'QA manual certification'
         input 'can we proceed with the build?'
